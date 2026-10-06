@@ -1,0 +1,392 @@
+{
+  "info": {
+    "_postman_id": "a984b2d8-bda0-47a8-83c1-0a72d9d52344",
+    "name": "Flask user app",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "58761708",
+    "_collection_link": "https://go.postman.co/collection/58761708-a984b2d8-bda0-47a8-83c1-0a72d9d52344?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Add user",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"Joseph Awaida\",\n    \"email\": \"joseph@example.com\",\n    \"phone\": \"70123456\",\n    \"address\": \"Beirut\",\n    \"country\": \"Lebanon\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/api/users/add",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "users",
+            "add"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Add user",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"Joseph Awaida\",\n    \"email\": \"joseph@example.com\",\n    \"phone\": \"70123456\",\n    \"address\": \"Beirut\",\n    \"country\": \"Lebanon\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/users/add",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "users",
+                "add"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "server",
+              "value": "Werkzeug/3.1.9 Python/3.13.7"
+            },
+            {
+              "key": "date",
+              "value": "Tue, 06 Oct 2026 13:35:09 GMT"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json"
+            },
+            {
+              "key": "content-length",
+              "value": "124"
+            },
+            {
+              "key": "access-control-allow-origin",
+              "value": "*"
+            },
+            {
+              "key": "connection",
+              "value": "close"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"address\": \"Beirut\",\n  \"country\": \"Lebanon\",\n  \"email\": \"joseph@example.com\",\n  \"name\": \"Joseph Awaida\",\n  \"phone\": \"70123456\",\n  \"user_id\": 1\n}"
+        }
+      ]
+    },
+    {
+      "name": "Get All Users",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/users",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "users"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Get All Users",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/users",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "users"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "server",
+              "value": "Werkzeug/3.1.9 Python/3.13.7"
+            },
+            {
+              "key": "date",
+              "value": "Tue, 06 Oct 2026 13:39:45 GMT"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json"
+            },
+            {
+              "key": "content-length",
+              "value": "126"
+            },
+            {
+              "key": "access-control-allow-origin",
+              "value": "*"
+            },
+            {
+              "key": "connection",
+              "value": "close"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n  {\n    \"address\": \"Beirut\",\n    \"country\": \"Lebanon\",\n    \"email\": \"joseph@example.com\",\n    \"name\": \"Joseph Awaida\",\n    \"phone\": \"70123456\",\n    \"user_id\": 1\n  }\n]"
+        }
+      ]
+    },
+    {
+      "name": "Get User by ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/users/1",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "users",
+            "1"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Get User by ID",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/users/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "users",
+                "1"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "server",
+              "value": "Werkzeug/3.1.9 Python/3.13.7"
+            },
+            {
+              "key": "date",
+              "value": "Tue, 06 Oct 2026 13:41:07 GMT"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json"
+            },
+            {
+              "key": "content-length",
+              "value": "124"
+            },
+            {
+              "key": "access-control-allow-origin",
+              "value": "*"
+            },
+            {
+              "key": "connection",
+              "value": "close"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"address\": \"Beirut\",\n  \"country\": \"Lebanon\",\n  \"email\": \"joseph@example.com\",\n  \"name\": \"Joseph Awaida\",\n  \"phone\": \"70123456\",\n  \"user_id\": 1\n}"
+        }
+      ]
+    },
+    {
+      "name": "Update User",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"user_id\": 1,\n    \"name\": \"Joseph Awaida\",\n    \"email\": \"joseph.updated@example.com\",\n    \"phone\": \"70987654\",\n    \"address\": \"Beirut, Lebanon\",\n    \"country\": \"Lebanon\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/api/users/update",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "users",
+            "update"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Update User",
+          "originalRequest": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"user_id\": 1,\n    \"name\": \"Joseph Awaida\",\n    \"email\": \"joseph.updated@example.com\",\n    \"phone\": \"70987654\",\n    \"address\": \"Beirut, Lebanon\",\n    \"country\": \"Lebanon\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/users/update",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "users",
+                "update"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "server",
+              "value": "Werkzeug/3.1.9 Python/3.13.7"
+            },
+            {
+              "key": "date",
+              "value": "Tue, 06 Oct 2026 13:42:17 GMT"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json"
+            },
+            {
+              "key": "content-length",
+              "value": "141"
+            },
+            {
+              "key": "access-control-allow-origin",
+              "value": "*"
+            },
+            {
+              "key": "connection",
+              "value": "close"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"address\": \"Beirut, Lebanon\",\n  \"country\": \"Lebanon\",\n  \"email\": \"joseph.updated@example.com\",\n  \"name\": \"Joseph Awaida\",\n  \"phone\": \"70987654\",\n  \"user_id\": 1\n}"
+        }
+      ]
+    },
+    {
+      "name": "Delete User",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/users/delete/1",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "users",
+            "delete",
+            "1"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Delete User",
+          "originalRequest": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/users/delete/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "users",
+                "delete",
+                "1"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "server",
+              "value": "Werkzeug/3.1.9 Python/3.13.7"
+            },
+            {
+              "key": "date",
+              "value": "Tue, 06 Oct 2026 13:43:17 GMT"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json"
+            },
+            {
+              "key": "content-length",
+              "value": "39"
+            },
+            {
+              "key": "access-control-allow-origin",
+              "value": "*"
+            },
+            {
+              "key": "connection",
+              "value": "close"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"status\": \"User deleted successfully\"\n}"
+        }
+      ]
+    }
+  ]
+}
